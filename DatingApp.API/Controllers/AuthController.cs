@@ -12,7 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace DatingApp.API.Controllers
 {
- 
+
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -57,9 +57,9 @@ namespace DatingApp.API.Controllers
 
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
-                new Claim(ClaimTypes.Name, userFromRepo.UserName)
-            };
+                    new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
+                    new Claim(ClaimTypes.Name, userFromRepo.UserName)
+                };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.
             GetBytes(_config.GetSection("AppSettings:Token").Value));
@@ -77,9 +77,11 @@ namespace DatingApp.API.Controllers
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return Ok(new {
+            return Ok(new
+            {
                 token = tokenHandler.WriteToken(token)
             });
+
         }
     }
 }
