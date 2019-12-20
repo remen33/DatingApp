@@ -36,7 +36,7 @@
           <h4>Descirption</h4>
           <p>{{user.introduction}}</p>
           <h4>Looking For</h4>
-          <p>{{user.lookingFor}}</p>
+          <p>{{user.lookingfor}}</p>
         </tab>
         <tab heading="Interests">
           <h4>Interests</h4>
@@ -44,7 +44,7 @@
         </tab>
         <tab heading="Photos">
           <h4>Photos</h4>
-          <p>Photos will go here</p>
+          <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
         </tab>
         <tab heading="Messages">
           <h4>Messages</h4>          
