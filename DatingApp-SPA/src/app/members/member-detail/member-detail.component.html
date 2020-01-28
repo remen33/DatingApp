@@ -8,7 +8,7 @@
           <strong>Location:</strong>
           <p>{{user.city}}, {{user.country}}</p>
         </div>
-      </div>
+      
       <div>
         <strong>Age:</strong>
         <p>{{user.age}}</p>
@@ -22,6 +22,7 @@
         <p>{{user.created}}</p>
       </div>
     </div>
+    </div>
     <div class="card-footer">
       <div class="btn-group d-flex">
         <button class="btn btn-primary w-100">Like</button>
@@ -34,13 +35,13 @@
       <tabset class="memeber-tabset">
         <tab heading="About {{user?.knownAs}}">
           <h4>Descirption</h4>
-          <p>{{user.introduction}}</p>
+          <p>{{user?.introduction}}</p>
           <h4>Looking For</h4>
-          <p>{{user.lookingfor}}</p>
+          <p>{{user?.lookingfor}}</p>
         </tab>
         <tab heading="Interests">
           <h4>Interests</h4>
-          <p>{{user.interests}}</p>
+          <p>{{user?.interests}}</p>
         </tab>
         <tab heading="Photos">
           <h4>Photos</h4>
